@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Connections | VDeck</title>
+
+    <link
+        rel="stylesheet"
+        href="connections.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         TOP BAR
+         ========================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <img
+                src="../assets/vdeck-logo.png"
+                alt="VDeck"
+            >
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    VDECK
+                </div>
+
+                <div class="brand-subtitle">
+                    EXPO INTELLIGENCE
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="portal-name">
+            EXHIBITOR PORTAL
+        </div>
+
+
+        <button
+            id="logoutBtn"
+            class="logout-btn"
+        >
+            Logout
+        </button>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+         ========================================== -->
+
+    <main class="connections-page">
+
+
+        <!-- PAGE HEADING -->
+
+        <section class="page-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    EXPO INTELLIGENCE
+                </div>
+
+                <h1>
+                    My Connections
+                </h1>
+
+                <p>
+                    People who connected with you during
+                    this expo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             SUMMARY
+             ========================================== -->
+
+        <section class="summary-card">
+
+            <div class="summary-icon">
+                C
+            </div>
+
+            <div class="summary-info">
+
+                <div class="summary-label">
+                    TOTAL CONNECTIONS
+                </div>
+
+                <div
+                    id="connectionCount"
+                    class="summary-number"
+                >
+                    0
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             EVENT
+             ========================================== -->
+
+        <section class="event-card">
+
+            <div class="event-label">
+                CURRENT EVENT
+            </div>
+
+            <div
+                id="eventName"
+                class="event-name"
+            >
+                Loading...
+            </div>
+
+            <div
+                id="eventLocation"
+                class="event-location"
+            >
+                -
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CONNECTIONS
+             ========================================== -->
+
+        <section class="connections-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="section-title">
+                        CONNECTED VISITORS
+                    </div>
+
+                    <div class="section-description">
+                        Your latest connections are shown below.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Loading -->
+
+            <div
+                id="loadingMessage"
+                class="state-message"
+            >
+                Loading connections...
+            </div>
+
+
+            <!-- Empty -->
+
+            <div
+                id="emptyMessage"
+                class="state-message empty-state"
+                style="display: none;"
+            >
+
+                <div class="empty-icon">
+                    C
+                </div>
+
+                <div class="empty-title">
+                    No connections yet
+                </div>
+
+                <div class="empty-description">
+                    Visitors who connect with you during
+                    the expo will appear here.
+                </div>
+
+            </div>
+
+
+            <!-- Error -->
+
+            <div
+                id="errorMessage"
+                class="state-message error-state"
+                style="display: none;"
+            >
+                Could not load connections.
+            </div>
+
+
+            <!-- Connection list -->
+
+            <div
+                id="connectionsList"
+                class="connections-list"
+            ></div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BACK
+             ========================================== -->
+
+        <div class="back-section">
+
+            <button
+                id="backHomeBtn"
+                class="back-btn"
+            >
+                ← BACK TO HOME
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="connections.js"></script>
+
+</body>
+
+</html>

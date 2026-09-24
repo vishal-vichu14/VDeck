@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VDeck | My Expo Intelligence</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <img
+                src="../assets/vdeck-logo.png"
+                alt="VDeck Logo"
+                class="brand-logo"
+            >
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    VDECK
+                </div>
+
+                <div class="brand-subtitle">
+                    EXPO INTELLIGENCE
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="portal-info">
+
+            <span>
+                EXHIBITOR PORTAL
+            </span>
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- =================================================
+             PAGE HEADER
+        ================================================== -->
+
+        <section class="page-header">
+
+            <p class="eyebrow">
+                EXPO INTELLIGENCE
+            </p>
+
+            <h1>
+                My Expo Intelligence
+            </h1>
+
+            <p class="page-description">
+                Understand how your stall is performing,
+                who is connecting with you, and how your
+                networking is developing during the expo.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EVENT INFORMATION
+        ================================================== -->
+
+        <section class="event-card">
+
+            <div>
+
+                <span class="event-label">
+                    CURRENT EVENT
+                </span>
+
+                <h2 id="eventName">
+                    Loading event...
+                </h2>
+
+                <p id="eventLocation">
+                    Loading location...
+                </p>
+
+            </div>
+
+
+            <div class="event-status">
+
+                <span class="status-dot"></span>
+
+                LIVE INTELLIGENCE
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             YOUR PERFORMANCE
+        ================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        YOUR PERFORMANCE
+                    </p>
+
+                    <h2>
+                        Connection Overview
+                    </h2>
+
+                    <p class="section-description">
+                        A snapshot of the networking activity
+                        around your stall.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+
+                <!-- CONNECTIONS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ↗
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-title">
+                            Connections
+                        </span>
+
+                        <strong
+                            id="connectionsCount"
+                            class="stat-value"
+                        >
+                            0
+                        </strong>
+
+                        <span class="stat-description">
+                            Visitors connected with your stall
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VISITORS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ◉
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-title">
+                            Visitors → You
+                        </span>
+
+                        <strong
+                            id="visitorInteractionsCount"
+                            class="stat-value"
+                        >
+                            0
+                        </strong>
+
+                        <span class="stat-description">
+                            Unique visitors who interacted with you
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXHIBITOR NETWORKING -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ◇
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span class="stat-title">
+                            Exhibitors I Scanned
+                        </span>
+
+                        <strong
+                            id="exhibitorsScannedCount"
+                            class="stat-value"
+                        >
+                            0
+                        </strong>
+
+                        <span class="stat-description">
+                            Exhibitor stalls you discovered
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             YOUR STALL ENGAGEMENT
+        ================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        YOUR STALL
+                    </p>
+
+                    <h2>
+                        Who Is Interacting With You?
+                    </h2>
+
+                    <p class="section-description">
+                        See who has discovered and interacted
+                        with your stall.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="engagement-grid">
+
+
+                <!-- VISITORS -->
+
+                <div class="engagement-card">
+
+                    <div class="engagement-header">
+
+                        <div>
+
+                            <span class="insight-label">
+                                VISITOR ENGAGEMENT
+                            </span>
+
+                            <h3>
+                                Visitors
+                            </h3>
+
+                        </div>
+
+                        <strong
+                            id="visitorEngagementPercentage"
+                            class="engagement-percentage"
+                        >
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="engagement-numbers">
+
+                        <strong id="visitorUnlockedCount">
+                            0
+                        </strong>
+
+                        <span>
+                            /
+                        </span>
+
+                        <span id="visitorTotalCount">
+                            0
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Visitors who have interacted
+                        with your stall.
+                    </p>
+
+
+                    <div class="engagement-progress">
+
+                        <div
+                            id="visitorEngagementBar"
+                            class="engagement-progress-bar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXHIBITORS -->
+
+                <div class="engagement-card">
+
+                    <div class="engagement-header">
+
+                        <div>
+
+                            <span class="insight-label">
+                                EXHIBITOR ENGAGEMENT
+                            </span>
+
+                            <h3>
+                                Exhibitors Who Discovered You
+                            </h3>
+
+                        </div>
+
+                        <strong
+                            id="exhibitorEngagementPercentage"
+                            class="engagement-percentage"
+                        >
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="engagement-numbers">
+
+                        <strong id="exhibitorUnlockedCount">
+                            0
+                        </strong>
+
+                        <span>
+                            /
+                        </span>
+
+                        <span id="exhibitorTotalCount">
+                            0
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Other exhibitors who have
+                        discovered your stall.
+                    </p>
+
+
+                    <div class="engagement-progress">
+
+                        <div
+                            id="exhibitorEngagementBar"
+                            class="engagement-progress-bar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONNECTION ACTIVITY
+        ================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        CONNECTION INSIGHTS
+                    </p>
+
+                    <h2>
+                        Connection Activity
+                    </h2>
+
+                    <p class="section-description">
+                        Interactions recorded at your stall
+                        during the event.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <div
+                    id="activityChart"
+                    class="activity-chart"
+                >
+
+                    <div class="chart-empty">
+                        No connection activity yet.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             VISITOR INSIGHTS
+        ================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        VISITOR INTELLIGENCE
+                    </p>
+
+                    <h2>
+                        Who Are You Connecting With?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="insights-grid">
+
+
+                <!-- DESIGNATIONS -->
+
+                <div class="insight-card">
+
+                    <div class="insight-header">
+
+                        <span class="insight-label">
+                            VISITOR DESIGNATIONS
+                        </span>
+
+                        <h3>
+                            Professional Roles
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        id="designationList"
+                        class="insight-list"
+                    >
+
+                        <div class="list-empty">
+                            No visitor data yet.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ORGANIZATIONS -->
+
+                <div class="insight-card">
+
+                    <div class="insight-header">
+
+                        <span class="insight-label">
+                            VISITOR ORGANIZATIONS
+                        </span>
+
+                        <h3>
+                            Organizations
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        id="organizationList"
+                        class="insight-list"
+                    >
+
+                        <div class="list-empty">
+                            No visitor data yet.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXHIBITORS I SCANNED
+        ================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        B2B NETWORKING
+                    </p>
+
+                    <h2>
+                        Exhibitors I Scanned
+                    </h2>
+
+                    <p class="section-description">
+                        Other exhibitors whose stalls you
+                        discovered through VDeck.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="exhibitorConnections"
+                class="recent-connections"
+            >
+
+                <div class="loading-state">
+                    Loading exhibitor networking...
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENT VISITORS
+        ================================================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        RECENT CONNECTIONS
+                    </p>
+
+                    <h2>
+                        Latest Visitors
+                    </h2>
+
+                    <p class="section-description">
+                        The latest visitors who interacted
+                        with your stall.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="connections.html"
+                    class="view-all-button"
+                >
+                    View All
+                </a>
+
+            </div>
+
+
+            <div
+                id="recentConnections"
+                class="recent-connections"
+            >
+
+                <div class="loading-state">
+                    Loading visitors...
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOTTOM ACTIONS
+        ================================================== -->
+
+        <section class="bottom-actions">
+
+            <a
+                href="connections.html"
+                class="primary-action"
+            >
+                My Connections
+            </a>
+
+            <a
+                href="home.html"
+                class="secondary-action"
+            >
+                ← Back to Home
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         LOADING OVERLAY
+    ====================================================== -->
+
+    <div
+        id="loadingOverlay"
+        class="loading-overlay"
+    >
+
+        <div class="loader"></div>
+
+        <p>
+            Loading Expo Intelligence...
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ERROR MESSAGE
+    ====================================================== -->
+
+    <div
+        id="errorMessage"
+        class="error-message"
+    ></div>
+
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

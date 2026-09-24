@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Complete Profile | VDeck</title>
+
+    <link
+        rel="stylesheet"
+        href="complete-profile.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PAGE
+    ====================================================== -->
+
+    <div class="page">
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <img
+                    src="../assets/vdeck-logo.png"
+                    alt="VDeck Logo"
+                    class="brand-logo"
+                >
+
+                <div class="brand-text">
+
+                    <div class="brand-name">
+                        VDECK
+                    </div>
+
+                    <div class="brand-subtitle">
+                        EXPO INTELLIGENCE
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="portal-label">
+                EXHIBITOR PORTAL
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+            <!-- =================================================
+                 PAGE INTRO
+            ================================================== -->
+
+            <section class="page-intro">
+
+                <div>
+
+                    <span class="eyebrow">
+                        WELCOME TO VDECK
+                    </span>
+
+                    <h1>
+                        Complete Your Profile
+                    </h1>
+
+                    <p>
+                        Your verified information has already been
+                        provided by the event organizer. Complete the
+                        remaining details so visitors can discover
+                        and connect with you.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 EVENT INFORMATION
+            ================================================== -->
+
+            <section class="event-card">
+
+                <div class="section-label">
+                    YOUR EVENT
+                </div>
+
+                <div class="event-info">
+
+                    <div class="event-detail">
+
+                        <span class="detail-label">
+                            Event
+                        </span>
+
+                        <span
+                            class="detail-value"
+                            id="eventName"
+                        >
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <div class="event-detail">
+
+                        <span class="detail-label">
+                            Location
+                        </span>
+
+                        <span
+                            class="detail-value"
+                            id="eventLocation"
+                        >
+                            Loading...
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 VERIFIED INFORMATION
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            VERIFIED INFORMATION
+                        </span>
+
+                        <h2>
+                            Your Event Identity
+                        </h2>
+
+                    </div>
+
+                    <span class="locked-label">
+                        🔒 VERIFIED
+                    </span>
+
+                </div>
+
+
+                <p class="section-description">
+                    These details were provided by the event
+                    organizer and cannot be changed from this portal.
+                </p>
+
+
+                <div class="verified-grid">
+
+                    <!-- Name -->
+
+                    <div class="field">
+
+                        <label>
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="exiName"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Organization -->
+
+                    <div class="field">
+
+                        <label>
+                            Organization
+                        </label>
+
+                        <input
+                            type="text"
+                            id="organization"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Designation -->
+
+                    <div class="field">
+
+                        <label>
+                            Designation
+                        </label>
+
+                        <input
+                            type="text"
+                            id="exiDesignation"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="field">
+
+                        <label>
+                            Phone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="exiPhone"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="field">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="text"
+                            id="exiEmail"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="field">
+
+                        <label>
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="exiLocation"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <!-- Exhibitor Code -->
+
+                    <div class="field full-width">
+
+                        <label>
+                            Exhibitor Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="exiCode"
+                            readonly
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PROFILE INFORMATION
+            ================================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            COMPLETE YOUR PROFILE
+                        </span>
+
+                        <h2>
+                            Tell Visitors About You
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <p class="section-description">
+                    Add the information you want visitors to see
+                    when they discover your VDeck profile.
+                </p>
+
+
+                <!-- =================================================
+                     FILE UPLOADS
+                ================================================== -->
+
+                <div class="upload-grid">
+
+                    <!-- Profile Photo -->
+
+                    <div class="upload-card">
+
+                        <label for="exiPhoto">
+                            Profile Photo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="exiPhoto"
+                            name="exi_photo"
+                            accept=".jpg,.jpeg,.png,.webp"
+                        >
+
+                        <small>
+                            JPG, PNG or WEBP
+                        </small>
+
+                    </div>
+
+
+                    <!-- Organization Logo -->
+
+                    <div class="upload-card">
+
+                        <label for="orgLogo">
+                            Organization Logo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="orgLogo"
+                            name="org_logo"
+                            accept=".jpg,.jpeg,.png,.webp"
+                        >
+
+                        <small>
+                            JPG, PNG or WEBP
+                        </small>
+
+                    </div>
+
+
+                    <!-- Brochure -->
+
+                    <div class="upload-card">
+
+                        <label for="exiBrochure">
+                            Organization Brochure
+                        </label>
+
+                        <input
+                            type="file"
+                            id="exiBrochure"
+                            name="exi_brochure"
+                            accept=".pdf"
+                        >
+
+                        <small>
+                            PDF only · Maximum 5 MB
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     DESCRIPTIONS
+                ================================================== -->
+
+                <div class="field">
+
+                    <label for="exiDescription">
+                        About You
+                    </label>
+
+                    <textarea
+                        id="exiDescription"
+                        name="exi_description"
+                        rows="5"
+                        placeholder="Tell visitors about yourself, your role, experience, or what you do..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="orgDescription">
+                        About Your Organization
+                    </label>
+
+                    <textarea
+                        id="orgDescription"
+                        name="org_description"
+                        rows="5"
+                        placeholder="Tell visitors about your organization, products, services, or business..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- =================================================
+                     CONTACT & SOCIAL LINKS
+                ================================================== -->
+
+                <div class="subsection-title">
+                    CONTACT & SOCIAL LINKS
+                </div>
+
+
+                <div class="editable-grid">
+
+                    <!-- WhatsApp -->
+
+                    <div class="field">
+
+                        <label for="exiWhatsapp">
+                            WhatsApp
+                        </label>
+
+                        <input
+                            type="url"
+                            id="exiWhatsapp"
+                            name="exi_whatsapp"
+                            placeholder="https://wa.me/..."
+                        >
+
+                    </div>
+
+
+                    <!-- Website -->
+
+                    <div class="field">
+
+                        <label for="exiWebsite">
+                            Website
+                        </label>
+
+                        <input
+                            type="url"
+                            id="exiWebsite"
+                            name="exi_website"
+                            placeholder="https://example.com"
+                        >
+
+                    </div>
+
+
+                    <!-- LinkedIn -->
+
+                    <div class="field">
+
+                        <label for="exiLinkedin">
+                            LinkedIn
+                        </label>
+
+                        <input
+                            type="url"
+                            id="exiLinkedin"
+                            name="exi_linkedin"
+                            placeholder="https://linkedin.com/in/..."
+                        >
+
+                    </div>
+
+
+                    <!-- Facebook -->
+
+                    <div class="field">
+
+                        <label for="exiFacebook">
+                            Facebook
+                        </label>
+
+                        <input
+                            type="url"
+                            id="exiFacebook"
+                            name="exi_facebook"
+                            placeholder="https://facebook.com/..."
+                        >
+
+                    </div>
+
+
+                    <!-- Instagram -->
+
+                    <div class="field">
+
+                        <label for="exiInstagram">
+                            Instagram
+                        </label>
+
+                        <input
+                            type="url"
+                            id="exiInstagram"
+                            name="exi_instagram"
+                            placeholder="https://instagram.com/..."
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ACTION AREA
+            ================================================== -->
+
+            <section class="action-section">
+
+                <div
+                    id="profileMessage"
+                    class="profile-message"
+                ></div>
+
+                <button
+                    type="button"
+                    id="nextBtn"
+                    class="next-btn"
+                >
+                    NEXT →
+                </button>
+
+            </section>
+
+        </main>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            <span>
+                VDeck Expo Intelligence
+            </span>
+
+            <span>
+                Connect. Be discovered.
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="complete-profile.js"></script>
+
+</body>
+
+</html>

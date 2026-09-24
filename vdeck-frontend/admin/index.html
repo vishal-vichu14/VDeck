@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | VDeck</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- =========================
+             LEFT BRANDING SECTION
+        ========================== -->
+
+        <section class="brand-section">
+
+            <div class="brand-content">
+
+                <div class="logo">V</div>
+
+                <h1>VDeck</h1>
+
+                <p>
+                    Expo Intelligence.<br>
+                    Business connections.<br>
+                    One ecosystem.
+                </p>
+
+                <div class="admin-label">
+                    ADMIN PORTAL
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LOGIN SECTION
+        ========================== -->
+
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <!-- Mobile Logo -->
+
+                <div class="mobile-logo">V</div>
+
+
+                <h2>Welcome back</h2>
+
+                <p class="subtitle">
+                    Sign in to the VDeck Admin Portal
+                </p>
+
+
+                <!-- =========================
+                     ADMIN LOGIN FORM
+                ========================== -->
+
+                <form id="loginForm">
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Admin Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your admin email"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="toggle-password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Error -->
+
+                    <p
+                        class="error-message"
+                        id="errorMessage"
+                    ></p>
+
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        class="continue-btn"
+                        id="loginBtn"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+
+                <p class="security-note">
+                    Authorized VDeck administration only.
+                </p>
+
+                <p class="copyright">
+                    © 2026 VDeck
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

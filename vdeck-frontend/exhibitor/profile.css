@@ -1,0 +1,898 @@
+/* ==========================================
+   VDECK EXHIBITOR PROFILE
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7f8;
+
+    color: #1d1d1d;
+}
+
+
+/* ==========================================
+   TOP BAR
+   ========================================== */
+
+.topbar {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 42px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.brand img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+
+.brand-name {
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #004369;
+}
+
+
+.brand-subtitle {
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    color: #777777;
+}
+
+
+.portal-name {
+    margin-left: auto;
+
+    margin-right: 28px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #004369;
+}
+
+
+.logout-btn {
+    border: 1px solid #004369;
+
+    background: transparent;
+
+    color: #004369;
+
+    padding: 9px 18px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.logout-btn:hover {
+    background: #004369;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   PAGE
+   ========================================== */
+
+.profile-page {
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 48px 28px 70px;
+}
+
+
+/* ==========================================
+   PAGE HEADING
+   ========================================== */
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+
+.eyebrow {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #D3AF37;
+
+    margin-bottom: 8px;
+}
+
+
+.page-heading h1 {
+    margin: 0;
+
+    font-size: 32px;
+
+    color: #004369;
+
+    font-weight: 800;
+}
+
+
+.page-heading p {
+    margin: 9px 0 0;
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   MAIN PROFILE CARD
+   ========================================== */
+
+.profile-card {
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    border: 1px solid #e4e8ea;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   PROFILE HEADER
+   ========================================== */
+
+.profile-header {
+    min-height: 180px;
+
+    padding: 30px 34px;
+
+    display: grid;
+
+    grid-template-columns:
+        110px 1fr auto;
+
+    align-items: center;
+
+    gap: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #004369 0%,
+            #00557f 100%
+        );
+
+    border-bottom: 4px solid #D3AF37;
+}
+
+
+/* ==========================================
+   PROFILE PHOTO
+   ========================================== */
+
+.photo-section {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.profile-photo {
+    width: 92px;
+    height: 92px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #004369;
+
+    border: 3px solid #D3AF37;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.2);
+
+    font-size: 32px;
+
+    font-weight: 800;
+}
+
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================
+   MAIN PROFILE INFORMATION
+   ========================================== */
+
+.profile-main-info {
+    min-width: 0;
+}
+
+
+.profile-label {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #D3AF37;
+
+    margin-bottom: 7px;
+}
+
+
+.profile-main-info h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.designation {
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-weight: 600;
+}
+
+
+.organization {
+    margin-top: 9px;
+
+    font-size: 15px;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   ORGANIZATION LOGO
+   ========================================== */
+
+.logo-section {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding-left: 20px;
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.organization-logo {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 8px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.7);
+
+    color: #888888;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.organization-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   SECTIONS
+   ========================================== */
+
+.section {
+    padding: 27px 34px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+
+.section-title {
+    margin-bottom: 17px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+
+    color: #004369;
+}
+
+
+/* ==========================================
+   VERIFIED INFORMATION
+   ========================================== */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 45px;
+
+    row-gap: 17px;
+}
+
+
+.info-item {
+    display: grid;
+
+    grid-template-columns: 145px 1fr;
+
+    align-items: center;
+
+    min-height: 32px;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    padding-bottom: 9px;
+}
+
+
+.info-label {
+    font-size: 12px;
+
+    color: #858585;
+
+    font-weight: 600;
+}
+
+
+.info-value {
+    font-size: 13px;
+
+    color: #222222;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+.info-value.code {
+    color: #004369;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   DESCRIPTIONS
+   ========================================== */
+
+.description {
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    white-space: pre-line;
+}
+
+
+/* ==========================================
+   LINKS
+   ========================================== */
+
+.links-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px 18px;
+}
+
+
+.link-item {
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    background: #f7f9fa;
+
+    border: 1px solid #edf0f1;
+
+    border-radius: 8px;
+}
+
+
+.link-label {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: #888888;
+}
+
+
+.link-item a {
+    min-width: 0;
+
+    color: #004369;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    word-break: break-word;
+
+    overflow-wrap: anywhere;
+}
+
+
+.link-item a:hover {
+    text-decoration: underline;
+}
+
+
+.disabled-link {
+    color: #aaaaaa !important;
+
+    cursor: default;
+
+    text-decoration: none !important;
+}
+
+
+/* ==========================================
+   BROCHURE
+   ========================================== */
+
+.brochure-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    background: #004369;
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    transition: 0.2s ease;
+}
+
+
+.brochure-btn:hover {
+    background: #003653;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   EVENT
+   ========================================== */
+
+.event-card {
+    display: flex;
+
+    align-items: center;
+
+    padding: 17px 18px;
+
+    background: #f7f9fa;
+
+    border-left: 4px solid #D3AF37;
+
+    border-radius: 8px;
+}
+
+
+.event-name {
+    font-size: 15px;
+
+    font-weight: 800;
+
+    color: #004369;
+}
+
+
+.event-location {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #777777;
+}
+
+
+/* ==========================================
+   ACTION
+   ========================================== */
+
+.profile-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding: 24px 34px;
+
+    background: #fafbfc;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.edit-btn {
+    padding: 11px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #D3AF37;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.edit-btn:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   MESSAGE
+   ========================================== */
+
+.profile-message {
+    padding: 0 34px 20px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #c0392b;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 800px) {
+
+    .topbar {
+        padding: 0 22px;
+    }
+
+
+    .portal-name {
+        display: none;
+    }
+
+
+    .profile-page {
+        padding:
+            35px 20px 50px;
+    }
+
+
+    .profile-header {
+        grid-template-columns:
+            90px 1fr;
+
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+
+    .logo-section {
+        grid-column: 2;
+
+        justify-content: flex-start;
+
+        padding-left: 0;
+
+        border-left: none;
+    }
+
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: 64px;
+
+        padding: 0 15px;
+    }
+
+
+    .brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .brand-name {
+        font-size: 16px;
+    }
+
+
+    .logout-btn {
+        padding:
+            8px 12px;
+
+        font-size: 10px;
+    }
+
+
+    .profile-page {
+        padding:
+            28px 12px 40px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 26px;
+    }
+
+
+    .page-heading p {
+        font-size: 13px;
+    }
+
+
+    .profile-header {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        justify-items: center;
+
+        padding: 28px 20px;
+    }
+
+
+    .profile-main-info {
+        width: 100%;
+    }
+
+
+    .logo-section {
+        grid-column: auto;
+
+        justify-content: center;
+
+        padding: 0;
+
+        border: none;
+    }
+
+
+    .profile-photo {
+        width: 82px;
+        height: 82px;
+
+        font-size: 28px;
+    }
+
+
+    .organization-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .section {
+        padding:
+            23px 20px;
+    }
+
+
+    .info-item {
+        grid-template-columns:
+            125px 1fr;
+    }
+
+
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .link-item {
+        grid-template-columns:
+            90px 1fr;
+    }
+
+
+    .profile-actions {
+        padding:
+            20px;
+    }
+
+
+    .edit-btn {
+        width: 100%;
+    }
+
+}

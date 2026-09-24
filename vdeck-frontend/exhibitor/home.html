@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>VDeck | Exhibitor Home</title>
+
+    <link
+        rel="stylesheet"
+        href="home.css"
+    >
+</head>
+
+<body>
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <img
+                src="../assets/vdeck-logo.png"
+                alt="VDeck"
+                class="brand-logo"
+            >
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+                    VDeck
+                </span>
+
+                <span class="brand-subtitle">
+                    EXPO INTELLIGENCE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="portal-name">
+            EXHIBITOR PORTAL
+        </div>
+
+
+        <button
+            id="logoutBtn"
+            class="logout-btn"
+        >
+            Logout
+        </button>
+
+    </header>
+
+
+
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main class="page-container">
+
+
+        <!-- =================================================
+             EVENT HEADER
+        ================================================== -->
+
+        <section class="event-header">
+
+            <div>
+
+                <p class="section-label">
+                    CURRENT EVENT
+                </p>
+
+                <h1 id="eventName">
+                    Loading event...
+                </h1>
+
+                <p
+                    id="eventLocation"
+                    class="event-location"
+                >
+                    Loading location...
+                </p>
+
+            </div>
+
+
+            <div class="live-status">
+
+                <span class="live-dot"></span>
+
+                <span>
+                    LIVE
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LIVE STATS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- EXHIBITORS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏢
+                </div>
+
+                <div class="stat-content">
+
+                    <p class="stat-label">
+                        EXHIBITORS
+                    </p>
+
+                    <h2
+                        id="exhibitorCount"
+                        class="stat-number"
+                    >
+                        —
+                    </h2>
+
+                    <p class="stat-description">
+                        Registered for this event
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VISITORS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    👥
+                </div>
+
+                <div class="stat-content">
+
+                    <p class="stat-label">
+                        VISITORS
+                    </p>
+
+                    <h2
+                        id="visitorCount"
+                        class="stat-number"
+                    >
+                        —
+                    </h2>
+
+                    <p class="stat-description">
+                        Registered visitors
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONNECTIONS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🤝
+                </div>
+
+                <div class="stat-content">
+
+                    <p class="stat-label">
+                        CONNECTIONS
+                    </p>
+
+                    <h2
+                        id="connectionCount"
+                        class="stat-number"
+                    >
+                        —
+                    </h2>
+
+                    <p class="stat-description">
+                        Networking interactions
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STALL DISCOVERY -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔓
+                </div>
+
+                <div class="stat-content">
+
+                    <p class="stat-label">
+                        STALL DISCOVERY
+                    </p>
+
+                    <h2
+                        id="stallDiscoveryCount"
+                        class="stat-number stall-discovery-number"
+                    >
+                        —
+                    </h2>
+
+                    <p class="stat-description">
+                        Unique stalls discovered
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPO DISCOVERY EXPLANATION
+        ================================================== -->
+
+        <section class="discovery-section">
+
+            <div class="discovery-card">
+
+                <div class="discovery-content">
+
+                    <p class="section-label">
+                        EXPO INTELLIGENCE
+                    </p>
+
+                    <h2>
+                        Stall Discovery
+                    </h2>
+
+                    <p>
+                        Unique exhibitor stalls discovered
+                        through VDeck networking across the
+                        entire expo.
+                    </p>
+
+                </div>
+
+
+                <div class="discovery-stat">
+
+                    <span
+                        id="discoveryProgressLabel"
+                        class="discovery-progress-label"
+                    >
+                        EVENT COVERAGE
+                    </span>
+
+                    <strong
+                        id="discoveryPercentage"
+                        class="discovery-percentage"
+                    >
+                        0%
+                    </strong>
+
+                    <div class="discovery-progress">
+
+                        <div
+                            id="discoveryProgressBar"
+                            class="discovery-progress-bar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <section class="navigation-section">
+
+            <p class="section-label">
+                EXHIBITOR PORTAL
+            </p>
+
+
+            <div class="navigation-grid">
+
+
+                <!-- MY PROFILE -->
+
+                <button
+                    class="navigation-card"
+                    id="myProfileBtn"
+                >
+
+                    <div class="navigation-icon">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            My Profile
+                        </h3>
+
+                        <p>
+                            View your exhibitor profile
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- DASHBOARD -->
+
+                <button
+                    class="navigation-card"
+                    id="dashboardBtn"
+                >
+
+                    <div class="navigation-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Dashboard
+                        </h3>
+
+                        <p>
+                            View your Expo Intelligence
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- CONNECTIONS -->
+
+                <button
+                    class="navigation-card"
+                    id="connectionsBtn"
+                >
+
+                    <div class="navigation-icon">
+                        🤝
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Connections
+                        </h3>
+
+                        <p>
+                            View your connections
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MESSAGE
+        ================================================== -->
+
+        <p
+            id="homeMessage"
+            class="home-message"
+        ></p>
+
+    </main>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>

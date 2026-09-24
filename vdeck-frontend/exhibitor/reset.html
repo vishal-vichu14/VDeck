@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VDeck Session Reset</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #004369;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .box {
+            background: white;
+            color: #222;
+            padding: 40px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 420px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #004369;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #D3AF37;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>VDeck Session Reset</h2>
+
+    <p id="message">
+        Clearing old exhibitor session...
+    </p>
+
+    <button id="continueBtn" style="display:none;">
+        Go to Exhibitor Login
+    </button>
+
+</div>
+
+
+<script>
+
+    // Clear old VDeck exhibitor session
+
+    localStorage.removeItem(
+        "vdeckExhibitorLoggedIn"
+    );
+
+    localStorage.removeItem(
+        "vdeckExhibitor"
+    );
+
+
+    // Also clear any temporary session data
+    // that may have been created during testing.
+
+    sessionStorage.clear();
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "Old exhibitor session cleared successfully.";
+
+
+    document.getElementById(
+        "continueBtn"
+    ).style.display =
+        "inline-block";
+
+
+    document.getElementById(
+        "continueBtn"
+    ).addEventListener(
+        "click",
+        function () {
+
+            window.location.replace(
+                "index.html"
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+</html>

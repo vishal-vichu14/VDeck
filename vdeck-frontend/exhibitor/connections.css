@@ -1,0 +1,641 @@
+/* ==========================================
+   VDECK EXHIBITOR CONNECTIONS
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    background: #f5f7f8;
+    color: #1d1d1d;
+}
+
+
+/* ==========================================
+   TOP BAR
+   ========================================== */
+
+.topbar {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #004369;
+}
+
+.brand-subtitle {
+    margin-top: 5px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #777777;
+}
+
+.portal-name {
+    margin-left: auto;
+    margin-right: 28px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #004369;
+}
+
+.logout-btn {
+    border: 1px solid #004369;
+    background: transparent;
+    color: #004369;
+    padding: 9px 18px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #004369;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   PAGE
+   ========================================== */
+
+.connections-page {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 48px 28px 70px;
+}
+
+
+/* ==========================================
+   PAGE HEADING
+   ========================================== */
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #D3AF37;
+    margin-bottom: 8px;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #004369;
+    font-weight: 800;
+}
+
+.page-heading p {
+    margin: 9px 0 0;
+    color: #707070;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   SUMMARY CARD
+   ========================================== */
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 25px;
+    background: #ffffff;
+    border: 1px solid #e4e8ea;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    margin-bottom: 18px;
+}
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #004369;
+    color: #D3AF37;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.summary-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #888888;
+}
+
+.summary-number {
+    margin-top: 4px;
+    font-size: 27px;
+    font-weight: 800;
+    color: #004369;
+}
+
+
+/* ==========================================
+   EVENT CARD
+   ========================================== */
+
+.event-card {
+    padding: 20px 24px;
+    margin-bottom: 30px;
+    background: #004369;
+    border-radius: 12px;
+    border-left: 4px solid #D3AF37;
+    color: #ffffff;
+}
+
+.event-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    color: #D3AF37;
+    margin-bottom: 7px;
+}
+
+.event-name {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.event-location {
+    margin-top: 5px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ==========================================
+   CONNECTIONS SECTION
+   ========================================== */
+
+.connections-section {
+    background: #ffffff;
+    border: 1px solid #e4e8ea;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.section-heading {
+    padding: 23px 26px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.section-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #004369;
+}
+
+.section-description {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888888;
+}
+
+
+/* ==========================================
+   CONNECTION LIST
+   ========================================== */
+
+.connections-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================
+   CONNECTION CARD
+   ========================================== */
+
+.connection-card {
+    display: grid;
+
+    grid-template-columns:
+        54px
+        minmax(0, 1fr)
+        240px;
+
+    align-items: center;
+
+    column-gap: 20px;
+
+    padding: 22px 26px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.connection-card:last-child {
+    border-bottom: none;
+}
+
+.connection-card:hover {
+    background: #fafcfd;
+}
+
+
+/* ==========================================
+   VISITOR AVATAR
+   ========================================== */
+
+.visitor-avatar {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #004369;
+    color: #D3AF37;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   VISITOR INFORMATION
+   ========================================== */
+
+.visitor-info {
+    min-width: 0;
+}
+
+.visitor-name {
+    font-size: 15px;
+    font-weight: 800;
+    color: #004369;
+
+    margin: 0;
+}
+
+.visitor-role {
+    margin-top: 5px;
+
+    font-size: 12px;
+    color: #555555;
+}
+
+.visitor-organization {
+    margin-top: 3px;
+
+    font-size: 12px;
+    color: #888888;
+}
+
+
+/* ==========================================
+   CONTACT INFORMATION
+   ========================================== */
+
+.visitor-contact {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 5px;
+}
+
+.contact-item {
+    font-size: 11px;
+    color: #666666;
+
+    text-align: right;
+
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    color: #004369;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   CONNECTION TIME
+   ========================================== */
+
+.connection-time {
+    margin-top: 7px;
+
+    font-size: 10px;
+    color: #999999;
+
+    text-align: right;
+}
+
+
+/* ==========================================
+   STATE MESSAGES
+   ========================================== */
+
+.state-message {
+    padding: 45px 25px;
+
+    text-align: center;
+
+    font-size: 13px;
+    color: #777777;
+}
+
+.empty-state {
+    padding: 55px 25px;
+}
+
+.empty-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef3f5;
+    color: #004369;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.empty-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #004369;
+}
+
+.empty-description {
+    max-width: 430px;
+
+    margin: 7px auto 0;
+
+    line-height: 1.6;
+
+    color: #888888;
+}
+
+.error-state {
+    color: #c0392b;
+}
+
+
+/* ==========================================
+   BACK BUTTON
+   ========================================== */
+
+.back-section {
+    display: flex;
+    justify-content: flex-start;
+
+    margin-top: 22px;
+}
+
+.back-btn {
+    padding: 10px 17px;
+
+    background: transparent;
+
+    border: 1px solid #004369;
+    border-radius: 7px;
+
+    color: #004369;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #004369;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 800px) {
+
+    .topbar {
+        padding: 0 22px;
+    }
+
+    .portal-name {
+        display: none;
+    }
+
+    .connections-page {
+        padding:
+            35px 20px 50px;
+    }
+
+    .connection-card {
+        grid-template-columns:
+            55px
+            minmax(0, 1fr);
+
+        align-items: start;
+
+        row-gap: 14px;
+    }
+
+    .visitor-contact {
+        grid-column: 2;
+
+        align-items: flex-start;
+
+        min-width: 0;
+    }
+
+    .contact-item {
+        text-align: left;
+    }
+
+    .connection-time {
+        text-align: left;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: 64px;
+        padding: 0 15px;
+    }
+
+    .brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .brand-name {
+        font-size: 16px;
+    }
+
+    .logout-btn {
+        padding:
+            8px 12px;
+
+        font-size: 10px;
+    }
+
+    .connections-page {
+        padding:
+            28px 12px 40px;
+    }
+
+    .page-heading {
+        margin-bottom: 22px;
+    }
+
+    .page-heading h1 {
+        font-size: 26px;
+    }
+
+    .page-heading p {
+        font-size: 13px;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .summary-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .event-card {
+        padding: 18px;
+        margin-bottom: 24px;
+    }
+
+    .section-heading {
+        padding:
+            20px;
+    }
+
+    .connection-card {
+        padding:
+            18px 20px;
+
+        grid-template-columns:
+            44px
+            minmax(0, 1fr);
+
+        column-gap: 13px;
+        row-gap: 12px;
+    }
+
+    .visitor-avatar {
+        width: 42px;
+        height: 42px;
+
+        font-size: 15px;
+    }
+
+    .visitor-name {
+        font-size: 14px;
+    }
+
+    .visitor-role,
+    .visitor-organization {
+        font-size: 11px;
+    }
+
+    .visitor-contact {
+        grid-column: 2;
+    }
+
+    .contact-item {
+        font-size: 11px;
+    }
+
+    .connection-time {
+        font-size: 10px;
+    }
+
+    .back-section {
+        margin-top: 18px;
+    }
+}

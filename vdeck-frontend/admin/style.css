@@ -1,0 +1,655 @@
+/* =========================
+   VDECK ADMIN LOGIN
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --deep-blue: #004369;
+    --gold: #D3AF37;
+
+    --white: #ffffff;
+    --black: #111111;
+
+    --light-gray: #f5f7f8;
+    --border: #dfe4e7;
+
+    --text-gray: #6b7378;
+
+    --error: #d93025;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--white);
+
+    color: var(--black);
+
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+}
+
+
+/* =========================
+   BRAND SECTION
+========================= */
+
+.brand-section {
+
+    width: 50%;
+
+    min-height: 100vh;
+
+    background: var(--deep-blue);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================
+   DECORATIVE CIRCLES
+========================= */
+
+.brand-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border:
+        1px solid
+        rgba(211, 175, 55, 0.18);
+
+    border-radius: 50%;
+
+    top: -180px;
+    left: -180px;
+
+}
+
+
+.brand-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 50%;
+
+    bottom: -350px;
+    right: -300px;
+
+}
+
+
+/* =========================
+   BRAND CONTENT
+========================= */
+
+.brand-content {
+
+    text-align: center;
+
+    color: var(--white);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo,
+.mobile-logo {
+
+    width: 72px;
+    height: 72px;
+
+    margin:
+        0 auto 25px;
+
+    border:
+        2px solid
+        var(--gold);
+
+    color: var(--gold);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================
+   BRAND TITLE
+========================= */
+
+.brand-content h1 {
+
+    font-size: 52px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.brand-content p {
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   ADMIN LABEL
+========================= */
+
+.admin-label {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding:
+        8px 18px;
+
+    border:
+        1px solid
+        rgba(211, 175, 55, 0.55);
+
+    border-radius: 20px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================
+   LOGIN SECTION
+========================= */
+
+.login-section {
+
+    width: 50%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+}
+
+
+.mobile-logo {
+
+    display: none;
+
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.login-card h2 {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.subtitle {
+
+    color: var(--text-gray);
+
+    margin-bottom: 32px;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =========================
+   EMAIL INPUT
+========================= */
+
+.form-group > input {
+
+    width: 100%;
+
+    height: 52px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    padding:
+        0 15px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+
+}
+
+
+.form-group > input:focus {
+
+    border-color:
+        var(--deep-blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 67, 105, 0.08);
+
+}
+
+
+/* =========================
+   PASSWORD INPUT
+========================= */
+
+.password-input {
+
+    height: 52px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: 0.2s ease;
+
+}
+
+
+.password-input:focus-within {
+
+    border-color:
+        var(--deep-blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 67, 105, 0.08);
+
+}
+
+
+.password-input input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding:
+        0 15px;
+
+    font-size: 15px;
+
+}
+
+
+.password-input input::placeholder {
+
+    color: #a0a6aa;
+
+}
+
+
+/* =========================
+   SHOW PASSWORD
+========================= */
+
+.toggle-password {
+
+    height: 100%;
+
+    padding:
+        0 15px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--deep-blue);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.toggle-password:hover {
+
+    color: #003653;
+
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+
+    color: var(--error);
+
+    font-size: 13px;
+
+    margin-top: -5px;
+
+    margin-bottom: 8px;
+
+    min-height: 18px;
+
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.continue-btn {
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--deep-blue);
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.continue-btn:hover {
+
+    background: #003653;
+
+}
+
+
+.continue-btn:active {
+
+    transform:
+        scale(0.99);
+
+}
+
+
+.continue-btn:disabled {
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================
+   SECURITY NOTE
+========================= */
+
+.security-note {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #8a9195;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+
+    text-align: center;
+
+    margin-top: 8px;
+
+    color: #b0b5b8;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .login-page {
+
+        display: block;
+
+    }
+
+
+    .brand-section {
+
+        display: none;
+
+    }
+
+
+    .login-section {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding: 25px;
+
+    }
+
+
+    .mobile-logo {
+
+        display: flex;
+
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 30px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .login-card h2 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .login-section {
+
+        padding: 20px;
+
+    }
+
+
+    .login-card h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 14px;
+
+    }
+
+}

@@ -1,0 +1,1200 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+        <title>VDeck Admin Portal</title>
+
+        <link
+            rel="stylesheet"
+            href="dashboard.css">
+
+    </head>
+
+
+    <body>
+
+
+    <!-- =========================================
+        MOBILE HEADER
+    ========================================= -->
+
+    <header class="mobile-header">
+
+        <div class="mobile-brand">
+
+            <div class="brand-mark">
+                V
+            </div>
+
+            <div>
+                <strong>VDeck</strong>
+                <span>ADMIN PORTAL</span>
+            </div>
+
+        </div>
+
+
+        <button
+            id="mobileMenuBtn"
+            class="mobile-menu-btn">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================================
+        SIDEBAR
+    ========================================= -->
+
+    <aside
+        id="sidebar"
+        class="sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                V
+            </div>
+
+            <div class="sidebar-brand-text">
+
+                <strong>
+                    VDeck
+                </strong>
+
+                <span>
+                    ADMIN PORTAL
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <nav class="sidebar-nav">
+
+
+            <button
+                class="nav-item active"
+                data-section="overview">
+
+                <span class="nav-icon">
+                    ◈
+                </span>
+
+                <span>
+                    Overview
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="nav-item"
+                data-section="organizations">
+
+                <span class="nav-icon">
+                    ◎
+                </span>
+
+                <span>
+                    Organizations
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="nav-item"
+                data-section="events">
+
+                <span class="nav-icon">
+                    ◫
+                </span>
+
+                <span>
+                    Events
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="nav-item"
+                data-section="exhibitors">
+
+                <span class="nav-icon">
+                    ◌
+                </span>
+
+                <span>
+                    Exhibitors
+                </span>
+
+            </button>
+
+
+        </nav>
+
+
+
+        <div class="sidebar-bottom">
+
+
+            <div class="admin-profile">
+
+                <div class="admin-avatar">
+                    A
+                </div>
+
+                <div class="admin-details">
+
+                    <strong>
+                        Administrator
+                    </strong>
+
+                    <span id="adminEmail">
+                        admin@vdeck.com
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                <span>
+                    ↪
+                </span>
+
+                Logout
+
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =========================================
+        MAIN
+    ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- =====================================
+            OVERVIEW
+        ====================================== -->
+
+        <section
+            id="overviewSection"
+            class="dashboard-section active-section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        VDECK ADMINISTRATION
+                    </p>
+
+                    <h1>
+                        Welcome to VDeck
+                    </h1>
+
+                    <p>
+                        Manage organizations, events and
+                        exhibitors from one place.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <span class="welcome-label">
+                        ADMIN PORTAL
+                    </span>
+
+                    <h2>
+                        Expo Intelligence
+                    </h2>
+
+                    <p>
+                        Build and manage the data foundation
+                        for VDeck-powered exhibitions.
+                    </p>
+
+                </div>
+
+                <div class="welcome-mark">
+                    V
+                </div>
+
+            </div>
+
+
+
+            <div class="quick-actions">
+
+
+                <button
+                    class="quick-action"
+                    data-go="organizations">
+
+                    <span>
+                        ◎
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Organizations
+                        </strong>
+
+                        <small>
+                            Create and verify organizations
+                        </small>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+
+
+                <button
+                    class="quick-action"
+                    data-go="events">
+
+                    <span>
+                        ◫
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Events
+                        </strong>
+
+                        <small>
+                            Create and manage exhibitions
+                        </small>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+
+
+                <button
+                    class="quick-action"
+                    data-go="exhibitors">
+
+                    <span>
+                        ◌
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Exhibitors
+                        </strong>
+
+                        <small>
+                            Import and manage exhibitors
+                        </small>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+            ORGANIZATIONS
+        ====================================== -->
+
+        <section
+            id="organizationsSection"
+            class="dashboard-section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Organizations
+                    </h1>
+
+                    <p>
+                        Create, review and verify event organizations.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="showOrganizationFormBtn"
+                    class="primary-btn">
+
+                    + Create Organization
+
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="organizationFormContainer"
+                class="form-card hidden">
+
+
+                <div class="form-card-header">
+
+                    <div>
+
+                        <span class="form-label">
+                            NEW ORGANIZATION
+                        </span>
+
+                        <h2>
+                            Create Organization
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <form id="organizationForm">
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Organization Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="organizationName"
+                                placeholder="e.g. Chennai Expo Group"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="organizationLocation"
+                                placeholder="e.g. Chennai, Tamil Nadu">
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            id="cancelOrganizationBtn"
+                            class="secondary-btn">
+
+                            Cancel
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+
+                            Create Organization
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+                <div
+                    id="organizationMessage"
+                    class="dashboard-message">
+                </div>
+
+
+            </div>
+
+
+
+            <div class="table-card">
+
+
+                <div class="table-header">
+
+                    <div>
+
+                        <span class="form-label">
+                            ORGANIZATION DIRECTORY
+                        </span>
+
+                        <h2>
+                            All Organizations
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="refreshOrganizationsBtn"
+                        class="secondary-btn">
+
+                        ↻ Refresh
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Organization
+                                </th>
+
+                                <th>
+                                    Location
+                                </th>
+
+                                <th>
+                                    Verification
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="organizationsTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+            EVENTS
+        ====================================== -->
+
+        <section
+            id="eventsSection"
+            class="dashboard-section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Events
+                    </h1>
+
+                    <p>
+                        Create and manage VDeck-powered exhibitions.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="showEventFormBtn"
+                    class="primary-btn">
+
+                    + Create Event
+
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="eventFormContainer"
+                class="form-card hidden">
+
+
+                <div class="form-card-header">
+
+                    <div>
+
+                        <span class="form-label">
+                            NEW EVENT
+                        </span>
+
+                        <h2>
+                            Create Event
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <form id="eventForm">
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group full-width">
+
+                            <label>
+                                Event Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="eventName"
+                                placeholder="e.g. Chennai Auto Expo 2026"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Organization
+                            </label>
+
+                            <select
+                                id="eventOrganization"
+                                required>
+
+                                <option value="">
+                                    Select Organization
+                                </option>
+
+                            </select>
+
+                            <small id="eventOrganizationStatus">
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Event Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="eventLocation"
+                                placeholder="e.g. Chennai Trade Centre">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Start Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="eventStart"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                End Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="eventEnd"
+                                required>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="event-info">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        Select an organization from the list.
+                        The organization ID is handled automatically.
+
+                    </div>
+
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            id="cancelEventBtn"
+                            class="secondary-btn">
+
+                            Cancel
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+
+                            Create Event
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+
+                <div
+                    id="eventMessage"
+                    class="dashboard-message">
+                </div>
+
+
+            </div>
+
+
+
+            <div class="table-card">
+
+
+                <div class="table-header">
+
+                    <div>
+
+                        <span class="form-label">
+                            EVENT DIRECTORY
+                        </span>
+
+                        <h2>
+                            All Events
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="refreshEventsBtn"
+                        class="secondary-btn">
+
+                        ↻ Refresh
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Event
+                                </th>
+
+                                <th>
+                                    Organization
+                                </th>
+
+                                <th>
+                                    Location
+                                </th>
+
+                                <th>
+                                    Dates
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="eventsTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+            EXHIBITORS
+        ====================================== -->
+
+        <section
+            id="exhibitorsSection"
+            class="dashboard-section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Exhibitors
+                    </h1>
+
+                    <p>
+                        Import and manage exhibitors for each event.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EVENT SELECTOR -->
+
+            <div class="form-card exhibitor-selector-card">
+
+
+                <div class="form-card-header">
+
+                    <div>
+
+                        <span class="form-label">
+                            STEP 01
+                        </span>
+
+                        <h2>
+                            Select Event
+                        </h2>
+
+                        <p>
+                            Choose the event where these exhibitors
+                            will participate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Event
+                    </label>
+
+                    <select
+                        id="exhibitorEventSelect">
+
+                        <option value="">
+                            Select Event
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div
+                    id="selectedEventInfo"
+                    class="selected-event-info hidden">
+
+                    <div>
+
+                        <span>
+                            EVENT
+                        </span>
+
+                        <strong id="selectedEventName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ORGANIZATION
+                        </span>
+
+                        <strong id="selectedEventOrganization">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            LOCATION
+                        </span>
+
+                        <strong id="selectedEventLocation">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- IMPORT -->
+
+            <div
+                id="exhibitorImportCard"
+                class="form-card exhibitor-import-card">
+
+
+                <div class="form-card-header">
+
+                    <div>
+
+                        <span class="form-label">
+                            STEP 02
+                        </span>
+
+                        <h2>
+                            Import Exhibitors
+                        </h2>
+
+                        <p>
+                            Upload the organizer's Excel or CSV
+                            exhibitor list.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="spreadsheet-info">
+
+
+                    <div class="spreadsheet-icon">
+                        XLS
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Required spreadsheet columns
+                        </strong>
+
+                        <p>
+                            organization, exi_name,
+                            exi_stall_number,
+                            exi_designation,
+                            exi_phonenumber,
+                            exi_email,
+                            exi_location,
+                            exi_description
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="file-upload-area">
+
+
+                    <input
+                        type="file"
+                        id="exhibitorFile"
+                        accept=".xlsx,.xls,.csv"
+                        hidden>
+
+
+                    <label
+                        for="exhibitorFile"
+                        class="file-select-btn">
+
+                        Choose Excel / CSV
+
+                    </label>
+
+
+                    <div
+                        id="selectedFileName"
+                        class="selected-file-name">
+
+                        No file selected
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="form-actions">
+
+
+                    <button
+                        id="importExhibitorsBtn"
+                        class="primary-btn"
+                        disabled>
+
+                        Import Exhibitors
+
+                    </button>
+
+
+                </div>
+
+
+
+                <div
+                    id="exhibitorImportMessage"
+                    class="dashboard-message">
+                </div>
+
+
+            </div>
+
+
+
+            <!-- EXHIBITOR LIST -->
+
+            <div class="table-card">
+
+
+                <div class="table-header">
+
+                    <div>
+
+                        <span class="form-label">
+                            EVENT EXHIBITORS
+                        </span>
+
+                        <h2>
+                            Exhibitor Directory
+                        </h2>
+
+                        <p id="exhibitorCountText">
+                            Select an event to view exhibitors.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="refreshExhibitorsBtn"
+                        class="secondary-btn"
+                        disabled>
+
+                        ↻ Refresh
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Exhibitor
+                                </th>
+
+                                <th>
+                                    Organization
+                                </th>
+
+                                <th>
+                                    Stall
+                                </th>
+
+                                <th>
+                                    Designation
+                                </th>
+
+                                <th>
+                                    Contact
+                                </th>
+
+                                <th>
+                                    Login Code
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="exhibitorsTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="dashboard.js"></script>
+
+    </body>
+
+    </html>

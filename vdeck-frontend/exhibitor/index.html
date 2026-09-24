@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>VDeck Exhibitor Portal</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- LEFT BRANDING -->
+        <section class="branding-panel">
+
+            <div class="branding-content">
+
+                <img
+                    src="../assets/vdeck-logo.png"
+                    alt="VDeck"
+                    class="vdeck-logo"
+                >
+
+                <p class="brand-label">
+                    VDECK EXPO INTELLIGENCE
+                </p>
+
+                <h1>
+                    Connect.<br>
+                    Be discovered.
+                </h1>
+
+                <p class="brand-description">
+                    Manage your exhibitor profile and connect
+                    with visitors through VDeck.
+                </p>
+
+            </div>
+
+            <div class="branding-footer">
+                VDeck · Expo Intelligence
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT LOGIN PANEL -->
+        <section class="login-panel">
+
+            <div class="login-container">
+
+                <div class="mobile-logo">
+                    <img
+                        src="../assets/vdeck-logo.png"
+                        alt="VDeck"
+                    >
+                </div>
+
+                <p class="eyebrow">
+                    EXHIBITOR PORTAL
+                </p>
+
+                <h2>
+                    Welcome back
+                </h2>
+
+                <p class="login-description">
+                    Enter the exhibitor code provided by VDeck
+                    to access your event profile.
+                </p>
+
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="exhibitorCode">
+                            Exhibitor Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="exhibitorCode"
+                            placeholder="e.g. VDX-K4N95J"
+                            maxlength="20"
+                            autocomplete="off"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="loginBtn"
+                        class="login-btn"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="loginMessage"
+                    class="login-message"
+                ></div>
+
+
+                <div class="security-note">
+
+                    <span class="security-icon">
+                        ◈
+                    </span>
+
+                    <div>
+                        <strong>
+                            Secure Exhibitor Access
+                        </strong>
+
+                        <p>
+                            Your exhibitor code is unique to
+                            your event profile.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <p class="login-footer">
+                    Need help accessing your profile?
+                    Contact the VDeck event team.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
